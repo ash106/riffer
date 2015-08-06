@@ -39,4 +39,12 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.paperclip_defaults = {
+    storage: :filesystem,
+    path: "#{Rails.root}/test/files/:filename",
+    url: "#{Rails.root}/test/files/:filename",
+    use_timestamp: false,
+    preserve_files: true
+  }
 end

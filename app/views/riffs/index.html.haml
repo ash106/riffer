@@ -1,0 +1,7 @@
+%h1 Riffer
+
+- @riffs.each do |riff|
+  %p= link_to riff.audio, riff
+  %p= riff.description
+
+= link_to "New Riff", new_riff_path

@@ -1,0 +1,13 @@
+tsoaf:
+  description: Bass line ripped straight from The Sound of Animals Fighting
+  audio_file_name: TSOAF.mp3
+  audio_content_type: audio/mp3
+  audio_file_size: 850464
+  audio_updated_at: <%= Time.now %>
+
+five_four_outro:
+  description: 5/4 Outro
+  audio_file_name: 5_4_Outro.mp3
+  audio_content_type: audio/mp3
+  audio_file_size: 895394
+  audio_updated_at: <%= Time.now %>
