@@ -55,3 +55,7 @@ gem 'paperclip', '~> 4.3'
 gem 'simple_form'
 gem 'aws-sdk', '< 2.0'
 gem 'devise'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jplayer'
+end

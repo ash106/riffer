@@ -1,4 +1,5 @@
-%p= @riff.audio
+= render "shared/jplayer", filename: @riff.audio.url
+
 %p= @riff.description
 %p= @riff.user.username
 
