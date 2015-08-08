@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class RiffsControllerTest < ActionController::TestCase
+  setup do
+    sign_in users(:alex)
+  end
+
   test 'get index is successful' do
     get :index
     assert_includes assigns(:riffs), riffs(:tsoaf)

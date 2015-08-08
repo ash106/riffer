@@ -1,4 +1,5 @@
 class RiffsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_riff, only: [:show, :edit, :update, :destroy]
 
   def index
