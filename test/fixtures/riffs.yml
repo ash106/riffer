@@ -4,6 +4,7 @@ tsoaf:
   audio_content_type: audio/mp3
   audio_file_size: 850464
   audio_updated_at: <%= Time.now %>
+  user: alex
 
 five_four_outro:
   description: 5/4 Outro
@@ -11,3 +12,4 @@ five_four_outro:
   audio_content_type: audio/mp3
   audio_file_size: 895394
   audio_updated_at: <%= Time.now %>
+  user: alex

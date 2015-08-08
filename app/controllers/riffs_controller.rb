@@ -10,11 +10,11 @@ class RiffsController < ApplicationController
   end
 
   def new
-    @riff = Riff.new
+    @riff = current_user.riffs.build
   end
 
   def create
-    @riff = Riff.new(riff_params)
+    @riff = current_user.riffs.build(riff_params)
     if @riff.save
       redirect_to riffs_url
     else
