@@ -2,7 +2,7 @@
 %p= @riff.description
 %p= @riff.user.username
 
-
-= link_to "Edit Riff", edit_riff_path(@riff)
-|
+- if @riff.user == current_user
+  = link_to "Edit Riff", edit_riff_path(@riff)
+  |
 = link_to "Back", riffs_path

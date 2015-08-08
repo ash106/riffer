@@ -1,6 +1,7 @@
 class RiffsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_riff, only: [:show, :edit, :update, :destroy]
+  before_action :owned_riff, only: [:edit, :update, :destroy]
 
   def index
     @riffs = Riff.all
@@ -46,5 +47,12 @@ class RiffsController < ApplicationController
 
     def set_riff
       @riff = Riff.find(params[:id])
+    end
+
+    def owned_riff
+      unless current_user == @riff.user
+        flash[:alert] = "That riff doesn't belong to you!"
+        redirect_to root_path
+      end
     end
 end
