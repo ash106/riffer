@@ -1,7 +1,5 @@
-%h1 Riffer
-
-- @riffs.each do |riff|
-  %p= link_to riff.audio, riff
+- @riffs.each_with_index do |riff, index|
+  %p= render "shared/jplayer", filename: riff.audio.url, index: index
   %p= riff.description
   %p= riff.user.username
 
