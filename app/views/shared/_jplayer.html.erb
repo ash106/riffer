@@ -44,6 +44,9 @@
           mp3: "<%= filename %>"
         });
       },
+      play: function() { // To avoid multiple jPlayers playing together.
+        $(this).jPlayer("pauseOthers");
+      },
       cssSelectorAncestor: "#jp_container_<%= index %>",
       swfPath: "/js",
       supplied: "mp3",
