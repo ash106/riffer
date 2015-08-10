@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+alex_comment:
+  content: comment on my own post
+  user: alex 
+  riff: five_four_outro  
+
+craig_comment:
+  content: i love tsoaf!
+  user: craig 
+  riff: tsoaf 

@@ -13,3 +13,10 @@
           .username
             = riff.user.username
           = riff.description
+      .comments{id: "comments_#{riff.id}"}
+        - if riff.comments
+          = render riff.comments, riff: riff
+    .comment-like-form.row
+      .comment-form
+        = form_for([riff, riff.comments.build], remote: true) do |f|
+          = f.text_field :content, placeholder: "Add a comment...", class: "comment_content", id: "comment_content_#{riff.id}"
