@@ -1,0 +1,15 @@
+.riff-wrapper
+  .riff
+    .riff-head
+      .username
+        = riff.user.username
+      .time-ago
+        = time_ago_in_words riff.created_at
+    .audio
+      = render "shared/jplayer", filename: riff.audio.url, index: index
+    .riff-bottom
+      .description
+        .description-content
+          .username
+            = riff.user.username
+          = riff.description

@@ -1,8 +1,7 @@
-%p= render "shared/jplayer", filename: @riff.audio.url, index: 0
-%p= @riff.description
-%p= @riff.user.username
+= render @riff, index: 0
 
-- if @riff.user == current_user
-  = link_to "Edit Riff", edit_riff_path(@riff)
-  |
-= link_to "Back", riffs_path
+%p.text-center
+  - if @riff.user == current_user
+    = link_to "Edit Riff", edit_riff_path(@riff)
+    |
+  = link_to "Back", riffs_path

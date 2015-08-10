@@ -1,6 +1,2 @@
 - @riffs.each_with_index do |riff, index|
-  %p= render "shared/jplayer", filename: riff.audio.url, index: index
-  %p= riff.description
-  %p= riff.user.username
-
-= link_to "New Riff", new_riff_path
+  = render riff, index: index
