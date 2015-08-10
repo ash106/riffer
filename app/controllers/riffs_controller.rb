@@ -4,7 +4,7 @@ class RiffsController < ApplicationController
   before_action :owned_riff, only: [:edit, :update, :destroy]
 
   def index
-    @riffs = Riff.all
+    @riffs = Riff.most_recent
   end
 
   def show

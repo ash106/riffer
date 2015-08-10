@@ -11,4 +11,8 @@ class RiffTest < ActiveSupport::TestCase
     invalid_riff = Riff.new
     assert_invalid invalid_riff, audio: "can't be blank"
   end
+
+  test 'most_recent orders riffs by newest creation' do
+    assert_equal riffs(:five_four_outro), Riff.most_recent.first
+  end
 end
