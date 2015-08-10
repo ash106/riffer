@@ -1,2 +1,3 @@
-- @riffs.each_with_index do |riff, index|
-  = render riff, index: index
+.riffs-wrapper.row
+  - @riffs.each_with_index do |riff, index|
+    = render riff, index: index

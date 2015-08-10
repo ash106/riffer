@@ -1,22 +1,21 @@
-.riff-wrapper
-  .riff
-    .riff-head
-      .username
-        = riff.user.username
-      .time-ago
-        = time_ago_in_words riff.created_at
-    .audio
-      = render "shared/jplayer", filename: riff.audio.url, index: index
-    .riff-bottom
-      .description
-        .description-content
-          .username
-            = riff.user.username
-          = riff.description
-      .comments{id: "comments_#{riff.id}"}
-        - if riff.comments
-          = render riff.comments, riff: riff
-    .comment-like-form.row
-      .comment-form
-        = form_for([riff, riff.comments.build], remote: true) do |f|
-          = f.text_field :content, placeholder: "Add a comment...", class: "comment_content", id: "comment_content_#{riff.id}"
+.riff
+  .riff-head
+    .username
+      = riff.user.username
+    .time-ago
+      = time_ago_in_words riff.created_at
+  .audio
+    = render "shared/jplayer", filename: riff.audio.url, index: index
+  .riff-bottom
+    .description
+      .description-content
+        .username
+          = riff.user.username
+        = riff.description
+    .comments{id: "comments_#{riff.id}"}
+      - if riff.comments
+        = render riff.comments, riff: riff
+  .comment-like-form.row
+    .comment-form
+      = form_for([riff, riff.comments.build], remote: true) do |f|
+        = f.text_field :content, placeholder: "Add a comment...", class: "comment_content", id: "comment_content_#{riff.id}"
