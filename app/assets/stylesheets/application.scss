@@ -133,16 +133,58 @@ body {
 
 /* ## Wrapper and styling for the new and edit views ## */
 
-// .form-wrapper {
-//   width: 60%;
-//   margin: 20px auto;
-//   background-color: #fff;
-//   padding: 40px;
-//   border: 1px solid #eeefef;
-//   border-radius: 3px;
-// }
+.form-wrapper {
+  width: 422px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #eeefef;
+  border-radius: 3px;
+  text-align: center;
+}
 
 // .edit-links {
 //   margin-top: 20px;
 //   margin-bottom: 40px;
 // }
+
+
+/* ## Form styling ## */
+
+.log-in {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: none;
+}
+
+.panel { border-radius: 8px; }
+
+.registration-bg, .login-bg {
+  height: 100%;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.registration-bg {
+  background-image: image-url("regbg.jpg");
+}
+
+.login-bg {
+  background-image: image-url("loginbg.jpg");
+}
+
+.simple_form .alert { 
+  margin-bottom: 0px;
+}
+
+#riff_audio {
+  padding: 1em;
+  margin: 0px auto;
+}

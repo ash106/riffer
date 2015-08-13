@@ -1,4 +1,11 @@
-= simple_form_for @riff do |f|
-  = f.input :audio
-  = f.input :description
-  = f.button :submit
+.form-wrapper
+  = simple_form_for @riff, html: { multipart: true } do |f|
+    .row
+      .col-md-12
+        = f.error_notification
+    .form-group
+      %h4 Upload an mp3 (required):
+      = f.input :audio, label: false
+    .form-group
+      = f.input :description, label: false, placeholder: 'Add a description...'
+    = f.button :submit, class: 'btn-success btn-block'
