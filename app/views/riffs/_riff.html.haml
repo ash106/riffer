@@ -12,6 +12,7 @@
         .username
           = riff.user.username
         = riff.description
+        = link_to "edit", edit_riff_path(riff), class: "edit-link" if riff.user == current_user
     .comments{id: "comments_#{riff.id}"}
       - if riff.comments
         = render riff.comments, riff: riff
