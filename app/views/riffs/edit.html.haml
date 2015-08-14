@@ -1,4 +1,6 @@
-%p= @riff.audio
+.current-audio
+  %h4 Current mp3:
+  = render "shared/jplayer", filename: @riff.audio.url, index: 0
 
 = render 'form'
 
